@@ -1,0 +1,11 @@
+# Python virtual env
+ven/
+__pycache__/
+*.py[cod]
+*.so
+
+# macOS files
+.DS_Store
+
+# logs, output runs
+runs/
