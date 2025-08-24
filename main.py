@@ -1,7 +1,10 @@
 # main.py
 from ultralytics import YOLO
 
-if __name__ == "__main__":
-    # just load & verify the model, no prediction call yet
-    model = YOLO("yolov8l.pt")
-    print("Model loaded successfully")
+model = YOLO("yolov8l.pt")
+   
+results = model.predict("data/raw_videos/video_1.mp4", save=True)
+print(results)
+print("====")
+for box in results[0].boxes:
+    print(box)
